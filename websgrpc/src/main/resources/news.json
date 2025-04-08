@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Websgrpc: A New Way to Build Web Applications",
+        "author": "John Doe",
+        "date": "2023-10-01",
+        "content": "Websgrpc is a new framework that allows developers to build web applications using gRPC. It simplifies the process of creating web applications by providing a set of tools and libraries that make it easy to work with gRPC."
+    },
+    {
+        "title": "Understanding gRPC and Its Benefits",
+        "author": "Jane Smith",
+        "date": "2023-10-02",
+        "content": "gRPC is a high-performance, open-source universal RPC framework that can run in any environment. It is designed for low latency and high throughput communication, making it ideal for microservices architectures."
+    }
+]
