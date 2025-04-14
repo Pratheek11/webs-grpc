@@ -9,4 +9,4 @@ This is a simple project to create a websocket and gRPC endpoints with microserv
 [frontend](frontend)
 
 ### Spring-boot microservice
-[websgrpc](websgrpc)
+[websgrpc-spring](websgrpc-spring)
