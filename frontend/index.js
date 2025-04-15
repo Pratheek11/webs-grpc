@@ -12,6 +12,22 @@ function connect() {
     }, function (error) {
         console.error('WebSocket connection error: ' + error);  // Log WebSocket errors
     });
+
+
+    const websGo = new WebSocket('ws://localhost:9000/webs');  // Correct the WebSocket URL
+    websGo.onopen = function (event) {
+        console.log('WebSocket connection opened: ' + event);  // Log the successful connection
+    };
+    websGo.onmessage = function (event) {
+        console.log('Message from server: ' + event.data);  // Log incoming messages
+        showNotification(event.data);  // Handle incoming messages
+    };
+    websGo.onerror = function (event) {
+        console.error('WebSocket error: ' + event);  // Log WebSocket errors
+    };
+    websGo.onclose = function (event) {
+        console.log('WebSocket connection closed: ' + event);  // Log the closed connection
+    };
 }
 function showNotification(message) {
     const notifications = document.getElementById('notifications');

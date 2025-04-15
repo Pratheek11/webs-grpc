@@ -11,7 +11,7 @@
 	<groupId>com.prat</groupId>
 	<artifactId>websgrpc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>websgrpc</name>
+	<name>websgrpc-spring</name>
 	<description>A simple microservice for websocket and gRPC</description>
 	<url/>
 	<licenses>
