@@ -7,7 +7,7 @@ function connect() {
     stompClient.connect({}, function (frame) {
         console.log('Connected: ' + frame);  // Log the successful connection
         stompClient.subscribe('/topic/news', function (message) {
-            showNotification(message.body);  // Handle incoming messages
+            showNotification(message.body, 'spring');  // Handle incoming messages
         });
     }, function (error) {
         console.error('WebSocket connection error: ' + error);  // Log WebSocket errors
@@ -20,7 +20,7 @@ function connect() {
     };
     websGo.onmessage = function (event) {
         console.log('Message from server: ' + event.data);  // Log incoming messages
-        showNotification(event.data);  // Handle incoming messages
+        showNotification(event.data, 'go');  // Handle incoming messages
     };
     websGo.onerror = function (event) {
         console.error('WebSocket error: ' + event);  // Log WebSocket errors
@@ -29,10 +29,17 @@ function connect() {
         console.log('WebSocket connection closed: ' + event);  // Log the closed connection
     };
 }
-function showNotification(message) {
-    const notifications = document.getElementById('notifications');
+function showNotification(message, type) {
+    const notifications = document.getElementById(type + 'Notifications');
     const notification = document.createElement('p');
     notification.textContent = message;
     notifications.appendChild(notification);
 }
 connect();
+
+function handleClick(type) {
+    const spring = document.getElementById('springNotifications');
+    const go = document.getElementById('goNotifications');
+    spring.style.display = (type == 'spring' || spring.style.display === 'none') ? 'block' : 'none';
+    go.style.display = (type == 'go' || go.style.display === 'none') ? 'block' : 'none';
+}
