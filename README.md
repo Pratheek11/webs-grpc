@@ -6,7 +6,10 @@ This is a simple project to create a websocket and gRPC endpoints with microserv
 ## Folder structure
 
 ### Frontend 
-[frontend](frontend)
+[frontend](frontend/README.md)
 
 ### Spring-boot microservice
-[websgrpc-spring](websgrpc-spring)
+[websgrpc-spring](websgrpc-spring/README.md)
+
+### GO microservice
+[websgrpc-go](websgrpc-go/README.md)
